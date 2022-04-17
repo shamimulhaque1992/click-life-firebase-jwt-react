@@ -1,9 +1,19 @@
 import React from 'react';
+import Carousels from '../Carousels/Carousels';
+import Services from '../Services/Services';
 
 const Home = () => {
+    /* const [photos, setPhoto] = useState([])
+    useEffect(() => {
+        fetch('carousel.json')
+        .then((response) => response.json())
+        .then(data =>setPhoto(data))
+    }) */
     return (
         <div>
-            <h1>This is home</h1>
+            <div className="">
+                <Carousels></Carousels>
+            </div>
         </div>
     );
 };

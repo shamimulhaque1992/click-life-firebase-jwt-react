@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import { Button, Card } from "react-bootstrap";
 
 const Services = () => {
-    return (
-        <div>
-            <h1>This is service</h1>
-        </div>
-    );
+  return (
+    <div>
+      
+    </div>
+  );
 };
 
 export default Services;
