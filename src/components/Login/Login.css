@@ -1,0 +1,20 @@
+.form-container {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #95A0A7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-link{
+    color: #FF9900!important;
+    text-decoration: none!important;
+    font-weight: bold!important;
+}
+.form-link:hover{
+    transition: all .5s;
+    color: #0051ff!important;
+    text-decoration: none!important;
+}
