@@ -13,6 +13,7 @@ const Home = () => {
         <div>
             <div className="">
                 <Carousels></Carousels>
+                <Services></Services>
             </div>
         </div>
     );
