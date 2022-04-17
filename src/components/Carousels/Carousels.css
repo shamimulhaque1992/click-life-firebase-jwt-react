@@ -5,3 +5,11 @@
   font-weight: bold;
   color: rgb(49, 49, 48);
 }
+.carousels-container img{
+    width: 70%!important;
+    margin: 0 auto !important;
+    background-color: rgb(0, 157, 255);
+}
+.carousels-container{
+    background-color: rgba(13, 255, 0, 0.127);
+}

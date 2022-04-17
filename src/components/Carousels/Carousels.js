@@ -5,7 +5,7 @@ import './Carousels.css'
 const Carousels = () => {
   return (
     <div>
-      <Carousel fade className="w-75 mx-auto mt-3 text-black">
+      <Carousel fade className="w-75 mx-auto mt-3 text-black carousels-container">
         <Carousel.Item>
           <img
             className="d-block w-100 h-50 img-fluid rounded"

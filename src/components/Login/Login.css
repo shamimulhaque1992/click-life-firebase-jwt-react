@@ -18,3 +18,7 @@
     color: #0051ff!important;
     text-decoration: none!important;
 }
+.social-login{
+    display: flex;
+    flex-direction: column;
+}
