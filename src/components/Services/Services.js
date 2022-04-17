@@ -1,20 +1,23 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./Services.css";
 
-const Services = () => {
+const Services = ({service}) => {
+    const {title, description, price, review, ratings, ratingsCount, img}= service;
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+      <Card className="mx-auto m-5 card" style={{ width: "18rem" }}>
+        <Card.Img className="border rounded mx-auto p-1"variant="top" src={img} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          <Card.Title className="title">{title}</Card.Title>
+          <Card.Text className="text">
+            {description}
           </Card.Text>
-          <Card.Text>Price:</Card.Text>
-          <Card.Text>Review:</Card.Text>
+          <Card.Text className="text">Price: {price}</Card.Text>
+          <Card.Text className="text">Review: {review}</Card.Text>
+          <Card.Text className="text">Ratings: {ratings}</Card.Text>
+          <Card.Text className="text">Ratings Count: {ratingsCount}</Card.Text>
           <Link to='/checkout'>
             <Button variant="primary">Go somewhere</Button>
           </Link>

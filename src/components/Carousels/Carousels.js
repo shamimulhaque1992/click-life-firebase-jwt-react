@@ -5,16 +5,16 @@ import './Carousels.css'
 const Carousels = () => {
   return (
     <div>
-      <Carousel fade className="w-75 mx-auto mt-3 text-black carousels-container">
+      <Carousel fade className="mx-auto mt-3 text-black carousels-container">
         <Carousel.Item>
           <img
-            className="d-block w-100 h-50 img-fluid rounded"
+            className="d-block img-fluid rounded"
             src="../../images/birthday.jpg"
             alt="First slide"
           />
-          <Carousel.Caption className="carosel-text mb-3 rounded">
-            <h3 className="font">Happy Birthday!</h3>
-            <p className="font">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <Carousel.Caption className="carosel-text mb-5 rounded">
+            <h3 className="font font-title">Happy Birthday!</h3>
+            <p className="font font-description">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -24,9 +24,9 @@ const Carousels = () => {
             alt="Second slide"
           />
 
-          <Carousel.Caption className="carosel-text mb-3 rounded">
-            <h3 className="font">Natural Beauty!</h3>
-            <p className="font">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Carousel.Caption className="carosel-text mb-5 rounded">
+            <h3 className="font font-title">Natural Beauty!</h3>
+            <p className="font font-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -36,9 +36,9 @@ const Carousels = () => {
             alt="Third slide"
           />
 
-          <Carousel.Caption className="carosel-text mb-3 rounded">
-            <h3 className="font">Congratulations! on Your Wedding.</h3>
-            <p className="font">
+          <Carousel.Caption className="carosel-text mb-5 rounded">
+            <h3 className="font font-title">Congratulations! on Your Wedding.</h3>
+            <p className="font font-description">
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
           </Carousel.Caption>
@@ -50,9 +50,9 @@ const Carousels = () => {
             alt="Third slide"
           />
 
-          <Carousel.Caption className="carosel-text mb-3 rounded">
-            <h3 className="font">Wedding Ceremony.</h3>
-            <p className="font">
+          <Carousel.Caption className="carosel-text mb-5 rounded">
+            <h3 className="font font-title">Wedding Ceremony.</h3>
+            <p className="font font-description">
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
           </Carousel.Caption>

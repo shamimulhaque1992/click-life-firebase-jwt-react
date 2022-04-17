@@ -12,10 +12,8 @@ import "./Login.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 // Login functionality
 const Login = () => {
-
   // All states
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,12 +22,12 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, googleuser, googleloading, googleerror] =
     useSignInWithGoogle(auth);
+  
   const [sendPasswordResetEmail, sending, reseterror] =
     useSendPasswordResetEmail(auth);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-
 
   // All function(handler)
   const handleEmailBlur = (event) => {
