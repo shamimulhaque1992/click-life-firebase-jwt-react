@@ -7,26 +7,23 @@ import Services from "../Services/Services";
 import "./Home.css"
 
 const Home = () => {
-  const [services, setServices] = useServices();
-  const [customers, setCustomers]= useCustomers();
+  const [services] = useServices();
+  const [customers]= useCustomers();
   console.log(services);
-  /* const [photos, setPhoto] = useState([])
-    useEffect(() => {
-        fetch('carousel.json')
-        .then((response) => response.json())
-        .then(data =>setPhoto(data))
-    }) */
+  
   return (
     <div>
       <div className="">
         <Carousels></Carousels>
+        <h1 className="text-center p-5 text-primary">My Featured Services</h1>
         <div className="services-container">
           {services.slice(0, 6).map((service) => (
             <Services key={service.id} service={service} />
           ))}
         </div>
+        <h1 className="text-center p-5 text-primary">My Happy Customers</h1>
         <div className="services-container">
-          {customers.slice(0, 6).map((customer) => (
+          {customers.slice(0, 3).map((customer) => (
             <Customers key={customer.id} customer={customer} />
           ))}
         </div>

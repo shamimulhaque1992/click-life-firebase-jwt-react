@@ -8,7 +8,7 @@ const Services = ({service}) => {
   return (
     <div>
       <Card className="mx-auto m-5 card" style={{ width: "18rem" }}>
-        <Card.Img className="border rounded mx-auto p-1"variant="top" src={img} />
+        <Card.Img className="border rounded mx-auto mt-2 p-1 card-img"variant="top" src={img} />
         <Card.Body>
           <Card.Title className="title">{title}</Card.Title>
           <Card.Text className="text">
@@ -19,7 +19,7 @@ const Services = ({service}) => {
           <Card.Text className="text">Ratings: {ratings}</Card.Text>
           <Card.Text className="text">Ratings Count: {ratingsCount}</Card.Text>
           <Link to='/checkout'>
-            <Button variant="primary">Go somewhere</Button>
+            <Button variant="primary">Place Order📥</Button>
           </Link>
         </Card.Body>
       </Card>

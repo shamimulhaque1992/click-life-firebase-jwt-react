@@ -4,6 +4,14 @@
   border-radius: 5px;
 }
 
+.text-centers{
+  background-color: rgb(138, 138, 138);
+  box-shadow: 12px 12px 2px 1px rgba(117, 117, 185, 0.2);
+  border-radius: 4px;
+  color: #fff;
+
+}
+
 @media only screen and (max-width: 576px) {
   .about img {
     width: 200px;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Footer.css"
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -82,10 +82,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-
-      <div className="mister_separator"></div>
-
-      
     </div>
   );
 };

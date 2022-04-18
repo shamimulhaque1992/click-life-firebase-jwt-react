@@ -32,7 +32,9 @@ const Header = () => {
           </LinkContainer>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+          >
             <Nav className="me-auto">
               <LinkContainer to="/">
                 <Nav.Link>Home</Nav.Link>
@@ -55,9 +57,9 @@ const Header = () => {
 
               {user ? (
                 <div className="d-flex align-items-center justify-content-center">
-                  <p className="mb-0 p-2">{user.email}</p>
-                  <button className="rounded" onClick={handleSignOut}>
-                    Sign out
+                  <p className="mb-0 p-2">👨‍💼{user.email}</p>
+                  <button className="rounded btn btn-primary d-flex justify-content-center align-items-center" onClick={handleSignOut}><i class="fa-solid fa-right-from-bracket" style={{transform: "rotateY(180deg)"}}></i>
+                    <span className="mx-1">Sign out</span>
                   </button>
                 </div>
               ) : (

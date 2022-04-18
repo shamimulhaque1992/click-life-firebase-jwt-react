@@ -3,7 +3,7 @@ import useServices from "../../hooks/useServices";
 import Services from "../Services/Services";
 
 const Allservices = () => {
-  const [services, setServices] = useServices();
+  const [services] = useServices();
   return (
     <div>
       <div className="services-container">

@@ -112,7 +112,7 @@ const Register = () => {
               className="position-absolute top-50 end-0 translate-middle-y"
               style={{ cursor: "pointer" }}
             >
-              👁
+              🗝
             </p>
           </div>
           {errors?.password && <p>{errors.password}</p>}
@@ -132,14 +132,14 @@ const Register = () => {
               className="position-absolute top-50 end-0 translate-middle-y"
               style={{ cursor: "pointer" }}
             >
-              👁
+              🗝
             </p>
           </div>
           {errors?.confirmPassword && <p>{errors.confirmPassword}</p>}
         </Form.Group>
         <p style={{ color: "red" }}>{error}</p>
-        <Button className="mb-3" variant="primary" type="submit">
-          Submit
+        <Button className="mb-3 d-flex justify-content-center align-items-center" variant="primary" type="submit"><i class="fa-solid fa-address-card"></i>
+          <span className="mx-1">Register</span>
         </Button>
         <p>
           Already Have an account?{" "}

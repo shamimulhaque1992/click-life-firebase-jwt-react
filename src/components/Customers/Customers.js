@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import "./Cusomers.css"
 
 const Customers = ({customer}) => {
     const {name, profetion, comment, review, ratings, recomendation, img}= customer;

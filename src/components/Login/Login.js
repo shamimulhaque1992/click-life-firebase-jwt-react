@@ -160,7 +160,7 @@ const Login = () => {
                 className="position-absolute top-50 end-0 translate-middle-y"
                 style={{ cursor: "pointer" }}
               >
-                👁
+                🗝
               </p>
             </div>
             {errors?.password && <p>{errors.password}</p>}
@@ -169,8 +169,8 @@ const Login = () => {
           <p style={{ color: "red" }}>{error?.message}</p>
           {loading && <p>Loading...</p>}
 
-          <Button className="mb-3" variant="primary" type="submit">
-            Submit
+          <Button className="mb-3 d-flex justify-content-center align-items-center" variant="primary" type="submit"><i class="fa-solid fa-right-from-bracket"></i>
+            <span className="mx-1">Login</span>
           </Button>
           <div className="google-siginn d-flex">
             <hr className="w-50" />
@@ -181,20 +181,20 @@ const Login = () => {
           <div className="social-login">
             <Button
               onClick={() => signInWithGoogle()}
-              className="mb-3"
+              className="mb-3 d-flex justify-content-around align-items-center"
               variant="primary"
               type="submit"
-            >
-              Login With Google.
+            ><i class="fa-brands fa-google"></i>
+              <span>Login With Google.</span>
             </Button>
             <br />
             <Button
               onClick={() => signInWithFacebook()}
-              className="mb-3"
+              className="mb-3 d-flex justify-content-around align-items-center"
               variant="primary"
               type="submit"
-            >
-              Login With Facebook.
+            ><i class="fa-brands fa-facebook-f"></i>
+              <span>Login With Facebook.</span>
             </Button>
           </div>
           <br />
