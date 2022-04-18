@@ -11,6 +11,7 @@ import auth from "../../firebase.init";
 import "./Login.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./Login.css";
 
 // Login functionality
 const Login = () => {
@@ -22,7 +23,7 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, googleuser, googleloading, googleerror] =
     useSignInWithGoogle(auth);
-  
+
   const [sendPasswordResetEmail, sending, reseterror] =
     useSendPasswordResetEmail(auth);
   const navigate = useNavigate();
@@ -70,8 +71,10 @@ const Login = () => {
   };
 
   return (
-    <div className="form-container mt-5 mb-5">
-      <Form onSubmit={handleUserSignIn}>
+    <div className="">
+      <h1 className="text-center pt-4 mt-4 text-primary">Welcome to Click-Life! Please Login...</h1>
+      <div className="form-container mx-auto mt-5 mb-5">
+      <Form className="form-body mx-auto" onSubmit={handleUserSignIn}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -146,6 +149,7 @@ const Login = () => {
         </p>
         <ToastContainer />
       </Form>
+    </div>
     </div>
   );
 };
