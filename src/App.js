@@ -1,9 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
+import Allcustomers from "./components/Allcustomers/Allcustomers";
 import Allservices from "./components/Allservices/Allservices";
 import Blogs from "./components/Blogs/Blogs";
 import Checkout from "./components/Checkout/Checkout";
+import Customers from "./components/Customers/Customers";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -24,6 +26,7 @@ function App() {
             <Checkout></Checkout>
           </RequireAuth>
         }></Route>
+        <Route path="/customers" element={<Allcustomers></Allcustomers>}></Route>
         <Route path="/blog" element={<Blogs></Blogs>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
