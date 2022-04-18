@@ -7,6 +7,11 @@ import auth from "../../firebase.init";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+    general: "",
+  });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfermPassword, setShowConfermPassword] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -17,15 +22,42 @@ const Register = () => {
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   const handleEmailBlur = (event) => {
-    setEmail(event.target.value);
+    const emailRegex = /\S+@\S+\.\S+/.test(event.target.value);
+    if (emailRegex) {
+      setEmail(event.target.value);
+      setErrors({ ...errors, email: "" });
+    } else {
+      setErrors({ ...errors, email: "❌ Invalid Email" });
+      setEmail("");
+    }
   };
 
   const handlePasswordBlur = (event) => {
-    setPassword(event.target.value);
+    const passRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+        event.target.value
+      );
+    if (passRegex) {
+      setPassword(event.target.value);
+      setErrors({...errors, password:""});
+    } else {
+      setErrors({...errors, password:"❌ Invalid Password"});
+      setPassword("");
+    }
   };
 
   const handleConfirmPasswordBlur = (event) => {
-    setConfirmPassword(event.target.value);
+    const passRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+        event.target.value
+      );
+    if (passRegex) {
+      setConfirmPassword(event.target.value);
+      setErrors({...errors, confirmPassword:""});
+    } else {
+      setErrors({...errors, confirmPassword:"❌ Invalid Password"});
+      setConfirmPassword("");
+    }
   };
 
   useEffect(() => {
@@ -62,6 +94,7 @@ const Register = () => {
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
+          {errors?.email && <p>{errors.email}</p>}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -74,10 +107,15 @@ const Register = () => {
               name="password"
               required
             />
-            <p onClick={()=> setShowPassword(!showPassword)}  className="position-absolute top-50 end-0 translate-middle-y" style={{cursor: "pointer"}}>
+            <p
+              onClick={() => setShowPassword(!showPassword)}
+              className="position-absolute top-50 end-0 translate-middle-y"
+              style={{ cursor: "pointer" }}
+            >
               👁
             </p>
           </div>
+          {errors?.password && <p>{errors.password}</p>}
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicConfermPassword">
           <Form.Label>Conferm Password</Form.Label>
@@ -89,10 +127,15 @@ const Register = () => {
               name="confermPassword"
               required
             />
-            <p onClick={()=> setShowConfermPassword(!showConfermPassword)} className="position-absolute top-50 end-0 translate-middle-y" style={{cursor: "pointer"}}>
+            <p
+              onClick={() => setShowConfermPassword(!showConfermPassword)}
+              className="position-absolute top-50 end-0 translate-middle-y"
+              style={{ cursor: "pointer" }}
+            >
               👁
             </p>
           </div>
+          {errors?.confirmPassword && <p>{errors.confirmPassword}</p>}
         </Form.Group>
         <p style={{ color: "red" }}>{error}</p>
         <Button className="mb-3" variant="primary" type="submit">
