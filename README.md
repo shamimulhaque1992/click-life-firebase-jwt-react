@@ -1,6 +1,6 @@
-# CompFreak
+# Click-Life
 
-Live site link: [Click-Life](https://bespoke-marshmallow-065bd8.netlify.app/).
+Live site link: [Click-Life](https://personal-photographer-d3808.web.app/).
 
 ## Devaloper Info.
 
@@ -22,6 +22,7 @@ You may also see any lint errors in the console.
 - Made some fake data to show fake review.
 - Implemented Private route for order page.
 - Used React hook to authenticate users.
+- Implemented google and facebook authentication.
 
 ## Learn More
 
