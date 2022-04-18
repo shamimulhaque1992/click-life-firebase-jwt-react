@@ -18,7 +18,7 @@ const Home = () => {
       <div className="">
         <Carousels></Carousels>
         <div className="services-container">
-          {services.slice(0, 3).map((service) => (
+          {services.slice(0, 6).map((service) => (
             <Services key={service.id} service={service} />
           ))}
         </div>
