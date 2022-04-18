@@ -1,6 +1,6 @@
 # Click-Life
 
-Live site link: [Click-Life](https://personal-photographer-d3808.firebaseapp.com/).
+Live site link: [Click-Life](https://personal-photographer-d3808.web.app/).
 
 ## Devaloper Info.
 
